@@ -11,8 +11,9 @@ export default function App({ appId }: { appId: string }) {
   const [categories] = sdk.prop<any>("categories");
   const [title] = sdk.prop<string>("title");
   const [slideConfig] = sdk.prop<any>("slideConfig");
-  getData({ object: window });
-  console.log("############################### TO AQUI ##############")
+  console.log(getData({ object: window }));
+  
+  
 
   return (
     <div className='swiper mySwiper-destaques swiper-destaques ' id="carrosselDestaques">
