@@ -4,7 +4,7 @@ import App from "./App.tsx";
 import "./index.css";
 import Zyph from 'library-mshops'
 
-const appId = "zyph-carousel-galery-brands-v2";
+const appId = "zyph-carousel-brands-list-page";
 
 function getTarget() {
   return (

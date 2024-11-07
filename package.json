@@ -12,6 +12,7 @@
     "register": "npm run build && zyph dist/assets/ --register",
     "preview": "vite preview",
     "preinstall": "node bin/configure.js"
+    
   },
   "dependencies": {
     "@inquirer/prompts": "^4.3.2",

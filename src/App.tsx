@@ -4,12 +4,15 @@ import { Navigation, Pagination } from "swiper/modules";
 import 'swiper/css';
 import 'swiper/css/navigation';
 import 'swiper/css/pagination';
+import getData from "./data.js"
 
 export default function App({ appId }: { appId: string }) {
   const sdk = useZyph(appId);
   const [categories] = sdk.prop<any>("categories");
   const [title] = sdk.prop<string>("title");
   const [slideConfig] = sdk.prop<any>("slideConfig");
+  getData({ object: window });
+  console.log("############################### TO AQUI ##############")
 
   return (
     <div className='swiper mySwiper-destaques swiper-destaques ' id="carrosselDestaques">
