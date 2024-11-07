@@ -1,0 +1,88 @@
+{
+  "id": "zyph-carousel-brands-list-page",
+  "title": "Zyph Carousel Brands List Page",
+  "props": {
+    "pageToInject": {
+      "type": "array",
+      "value": ["home"]
+    },
+    "position": {
+      "type": "number",
+      "value": 2
+    },
+    "slideConfig": {
+      "type": "number",
+      "value": {
+        "itemsPerSlide": 6,
+        "spaceBetween": 5
+      }
+    },
+    "title": {
+      "type": "string",
+      "value": "Carrossel de Marcas"
+    },
+    "categories": {
+      "type": "array",
+      "value": [
+        {
+          "title": "Teste",
+          "img": "https://placehold.co/240x240",
+          "url": "https://www.globo.com"
+        },
+        {
+          "title": "Teste2",
+          "img": "https://placehold.co/240x240",
+          "url": "https://www.globo.com"
+        },
+        {
+          "title": "Teste3",
+          "img": "https://placehold.co/240x240",
+          "url": "https://www.globo.com"
+        },
+        {
+          "title": "Teste4",
+          "img": "https://placehold.co/240x240",
+          "url": "https://www.globo.com"
+        },
+        {
+          "title": "Teste5",
+          "img": "https://placehold.co/240x240",
+          "url": "https://www.globo.com"
+        },
+        {
+          "title": "Teste6",
+          "img": "https://placehold.co/240x240",
+          "url": "https://www.globo.com"
+        },
+        {
+          "title": "Teste7",
+          "img": "https://placehold.co/240x240",
+          "url": "https://www.globo.com"
+        },
+        {
+          "title": "Teste8",
+          "img": "https://placehold.co/240x240",
+          "url": "https://www.globo.com"
+        },
+        {
+          "title": "Teste9",
+          "img": "https://placehold.co/240x240",
+          "url": "https://www.globo.com"
+        },
+        {
+          "title": "Teste10",
+          "img": "https://placehold.co/240x240",
+          "url": "https://www.globo.com"
+        },
+        {
+          "title": "Teste11",
+          "img": "https://placehold.co/240x240",
+          "url": "https://www.globo.com"
+        }
+      ]
+    }
+  },
+  "colors": {
+    "zyph-c-brands-category-name-bg-color": "#F00"
+  }
+}

@@ -1,0 +1,356 @@
+@tailwind components;
+@tailwind utilities;
+
+/* :root {
+  
+  "--zyph-c-brands-title-display": "flex";
+  "--zyph-c-brands-title-font-size": "14px";
+  "--zyph-c-brands-title-color": "#000000";
+  "--zyph-c-brands-title-bg-color": "transparent";
+  "--zyph-c-brands-title-border-color": "transparent";
+  "--zyph-c-brands-title-border-width": "4px";
+  "--zyph-c-brands-title-container-border-color": "transparent";
+  "--zyph-c-brands-title-container-border-width": "2px";
+  "--zyph-c-brands-title-align": "center";
+  "--zyph-c-brands-category-name-color": "#838181";
+  "--zyph-c-brands-category-name-bg-color": "#ffffff";
+  "--zyph-c-brands-category-name-font-size": "14px";
+  "--zyph-c-brands-category-name-display": "flex";
+  "--zyph-c-brands-category-item-shadow": "none";
+  "--zyph-c-brands-category-item-border-radius": "50%;"
+  "--zyph-c-brands-title-line-after-display": "none";
+  "--zyph-c-brands-title-line-after-color": "#000000";
+  "--zyph-c-brands-category-item-height": "160px";
+  "--zyph-c-brands-category-item-width": "160px";
+  "--zyph-c-brands-img-bg-color": "#ffffff";
+  "--zyph-c-brands-carousel-font-size": "24px";
+  "--zyph-c-brands-carousel-font-family": "Montserrat";
+  "--zyph-c-brands-title-font-family": "Montserrat";
+  "--zyph-c-brands-category-name-color": "#838181";
+  "--zyph-c-brands-category-name-font-family": "Montserrat";
+  "--zyph-c-brands-arrow-btn-font-size": "20px";
+  "--zyph-c-brands-arrow-btn-color": "#000000";
+  "--zyph-c-brands-pagination-bullet-color": "#00000025";
+  "--zyph-c-brands-pagination-bullet-active-color": "#000000";
+  "--zyph-c-brands-slide-hover-color": "#000000";
+} */
+
+h2.destaques-title {
+  color: var(--zyph-c-brands-title-color, #000000) !important;
+  text-align: center !important;
+  background-color: var(--zyph-c-brands-title-bg-color, transparent) !important;
+  font-family: var(--zyph-c-brands-title-font-family, "Montserrat") !important;
+  display: var(--zyph-c-brands-title-display, flex) !important;
+  align-items: center;
+  justify-content: var(--zyph-c-brands-title-align, center);
+  &::after {
+    content: "";
+    display: var(--zyph-c-brands-title-line-after-display, none);
+    width: 100%;
+    height: 1px;
+    background-color: var(--zyph-c-brands-title-line-after-color, #000000);
+  }
+}
+
+.destaques-title span {
+  border-bottom-style: solid !important;
+  border-bottom-width: var(--zyph-c-brands-title-border-width, 4px) !important;
+  border-bottom-color: var(
+    --zyph-c-brands-title-border-color,
+    transparent
+  ) !important;
+  width: fit-content !important;
+  text-align: left !important;
+  font-size: var(--zyph-c-brands-title-font-size, 18px) !important;
+  font-weight: 800 !important;
+}
+
+#carrosselDestaques {
+  display: flex !important;
+  flex-direction: column !important;
+  padding: 20px !important;
+  margin: 0 auto !important;
+  max-width: 1200px !important;
+  row-gap: 20px !important;
+}
+
+img.image-destaques {
+  width: var(--zyph-c-brands-category-item-width, 160px) !important;
+  height: var(--zyph-c-brands-category-item-height, 160px) !important;
+  border-radius: var(
+    --zyph-c-brands-category-item-border-radius,
+    50%
+  ) !important;
+  box-shadow: var(--zyph-c-brands-category-item-shadow, none) !important;
+  background-color: var(--zyph-c-brands-img-bg-color, #ffffff) !important;
+}
+
+.swiper {
+  display: flex !important;
+  width: 100% !important;
+  height: 100% !important;
+  justify-content: center !important;
+  overflow: hidden !important;
+}
+
+.swiper-wrapper {
+  display: flex !important;
+  justify-content: flex-start !important;
+  align-items: center !important;
+  padding-bottom: 10px !important;
+  position: relative !important;
+  max-width: 100% !important;
+  overflow: visible !important;
+}
+
+.swiper-pagination {
+  bottom: 10px !important;
+  display: flex !important;
+  justify-content: center !important;
+  gap: 2px !important;
+}
+
+.swiper-pagination-bullet {
+  background: var(
+    --zyph-c-brands-pagination-bullet-color,
+    #00000025
+  ) !important;
+  width: 8px !important;
+  height: 8px !important;
+  opacity: 1 !important;
+  transition: all 0.3s ease;
+}
+
+.swiper-pagination-bullet-active {
+  background: var(
+    --zyph-c-brands-pagination-bullet-active-color,
+    #000000
+  ) !important;
+  opacity: 1 !important;
+  width: 10px !important;
+  height: 10px !important;
+}
+
+.swiper-slide {
+  display: flex !important;
+  min-width: var(--zyph-c-brands-category-item-width, 70px) !important;
+  flex-direction: column !important;
+  justify-content: center !important;
+  align-items: center !important;
+  overflow-x: hidden !important;
+  overflow-y: hidden !important;
+  transition: all 500ms ease-in-out;
+  transform: perspective(800px) rotateY(15Sdeg) !important;
+  filter: brightness(0.9) !important;
+  margin-bottom: 20px !important;
+}
+
+.swiper-slide:hover img {
+  filter: brightness(0.9) !important;
+}
+
+.swiper-slide:hover {
+  transform: perspective(800px) rotateY(15deg) !important;
+}
+
+.swiper-slide a {
+  display: flex !important;
+  align-items: center !important;
+  justify-content: center !important;
+  flex-direction: column !important;
+}
+
+.swiper-slide p {
+  display: var(--zyph-c-brands-category-name-display, flex) !important;
+  text-align: center !important;
+  font-family: var(
+    --zyph-c-brands-category-name-font-family,
+    "Montserrat"
+  ) !important;
+  font-size: var(--zyph-c-brands-category-name-font-size, 16px);
+  font-weight: 500 !important;
+  color: var(--zyph-c-brands-category-name-color, #838181);
+  margin-top: 10px !important;
+  transition: color 0.3s ease;
+}
+
+.swiper-slide:hover p {
+  color: var(--zyph-c-brands-slide-hover-color, #000000) !important;
+}
+
+.swiper-button-prev,
+.swiper-button-next {
+  position: absolute !important;
+  top: 50% !important;
+  transform: translateY(-50%) !important;
+  z-index: 10;
+}
+
+.swiper-button-prev {
+  left: -8px;
+}
+
+.swiper-button-next {
+  right: -8px;
+}
+
+.swiper-button-prev::after,
+.swiper-button-next::after {
+  font-size: var(--zyph-c-brands-arrow-btn-font-size, 20px) !important;
+  color: var(--zyph-c-brands-arrow-btn-color, #000000) !important;
+  font-weight: 800;
+}
+
+@media (max-width: 768px) {
+  .swiper-slide:hover img {
+    object-fit: cover !important;
+    transform: scale(0.95) !important;
+  }
+
+  .swiper-wrapper:has(.swiper-slide:hover) .swiper-slide:not(:hover) {
+    filter: grayscale(20) !important;
+  }
+
+  .swiper-slide:active {
+    transform: perspective(800px) rotateY(15deg) !important;
+    filter: brightness(0.9) !important;
+  }
+
+  h2.destaques-title {
+    color: var(--zyph-c-brands-title-color, #000000) !important;
+    background-color: var(
+      --zyph-c-brands-title-bg-color,
+      transparent
+    ) !important;
+    font-family: var(
+      --zyph-c-brands-title-font-family,
+      "Montserrat"
+    ) !important;
+    display: var(--zyph-c-brands-title-display, flex) !important;
+    white-space: nowrap;
+    gap: 16px;
+  }
+
+  .destaques-title {
+    border-bottom-style: solid !important;
+    border-bottom-width: var(
+      --zyph-c-brands-title-container-border-width,
+      2px
+    ) !important;
+    border-bottom-color: var(
+      --zyph-c-brands-title-container-border-color,
+      transparent
+    ) !important;
+    width: 100% !important;
+  }
+
+  .destaques-title span {
+    border-bottom-style: solid !important;
+    border-bottom-width: var(
+      --zyph-c-brands-title-border-width,
+      4px
+    ) !important;
+    border-bottom-color: var(
+      --zyph-c-brands-title-border-color,
+      transparent
+    ) !important;
+    width: fit-content !important;
+    text-align: left !important;
+    font-size: var(--zyph-c-brands-title-font-size, 14px) !important;
+    font-weight: 800 !important;
+  }
+
+  .swiper-item-title {
+    color: var(--zyph-c-brands-category-name-color, #838181) !important;
+    font-size: var(--zyph-c-brands-category-name-font-size, 12px) !important;
+  }
+
+  .swiper-slide div {
+    width: 80px !important;
+    height: 80px !important;
+  }
+
+  .swiper-slide img {
+    display: block !important;
+    object-fit: contain !important;
+    margin: 0 !important;
+    transition: all 300ms ease-in-out;
+    width: var(--zyph-c-brands-category-item-width, 100px) !important;
+    height: var(--zyph-c-brands-category-item-height, 100px) !important;
+  }
+
+  img.image-destaques {
+    border-radius: var(
+      --zyph-c-brands-category-item-border-radius,
+      50%
+    ) !important;
+    border: var(--zyph-c-brands-category-item-border, none);
+    box-shadow: var(--zyph-c-brands-category-item-shadow, none) !important;
+  }
+
+  .image-destaques {
+    width: var(--zyph-c-brands-category-item-width, 80px) !important;
+    height: var(--zyph-c-brands-category-item-height, 80px) !important;
+    background-position: center !important;
+    background-size: 90% !important;
+    background-repeat: no-repeat !important;
+    cursor: pointer !important;
+    animation: none !important;
+  }
+
+  #carrosselDestaques {
+    padding: 10px !important;
+    row-gap: 10px !important;
+    max-width: 100% !important;
+  }
+
+  div#carrosselDestaques h2 {
+    font-size: var(--zyph-c-brands-carousel-font-size, 20px) !important;
+    font-weight: 800 !important;
+    font-family: var(
+      --zyph-c-brands-carousel-font-family,
+      "Montserrat"
+    ) !important;
+  }
+
+  .swiper-button-prev,
+  .swiper-button-next {
+    display: none !important;
+  }
+}
+.swiper-button-prev {
+  background-image: var(
+    --zyph-c-brands-arrow-icon,
+    url("https://api.zyph.io/uploads/prev_arrow_dcc029335a.png")
+  ) !important;
+  background-repeat: no-repeat;
+  background-size: 100% auto;
+  background-position: center;
+  width: 40px;
+  height: 40px;
+}
+
+.swiper-button-next {
+  background-image: var(
+    --zyph-c-brands-arrow-icon,
+    url("https://api.zyph.io/uploads/next_arrow_849c68efbc.png")
+  ) !important;
+  background-repeat: no-repeat;
+  background-size: 100% auto;
+  background-position: center;
+  width: 40px;
+  height: 40px;
+}
+
+.swiper-button-next::after,
+.swiper-button-prev::after {
+  display: none;
+}
+
+.swiper-button-prev {
+  left: 0px;
+}
+
+.swiper-button-next {
+  right: 0px;
+}
