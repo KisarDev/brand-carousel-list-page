@@ -1,7 +1,6 @@
 function getData({ object }: { object: Window & typeof globalThis }) {
     let brands: any = []
     try {
-        // Verifica se a propriedade __PRELOADED_STATE__ existe antes de acessar
         if (object && "__PRELOADED_STATE__" in object) {
             const data = JSON.parse((object as any).__PRELOADED_STATE__.innerHTML);
             const components = data.pageState.initialState.sidebar.components
