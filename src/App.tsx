@@ -5,16 +5,22 @@ import 'swiper/css';
 import 'swiper/css/navigation';
 import 'swiper/css/pagination';
 import getData from "./data.js"
+import { Map, Shop } from "./types.js";
 
 export default function App({ appId }: { appId: string }) {
   const sdk = useZyph(appId);
-  const [categories] = sdk.prop<any>("categories");
+  const [imgByBrand] = sdk.prop<Map>("imgByBrand");
   const [title] = sdk.prop<string>("title");
   const [slideConfig] = sdk.prop<any>("slideConfig");
-  console.log(getData({ object: window }));
-  
-  
-
+  const arrayShops: Shop[] = getData({ object: window });
+  // const objetoInterno: Record<string, string> = {
+  //   "Lavor": "url_da_img0",
+  //   "Util": "url_da_img1",
+  //   "Flash": "url_da_img2",
+  //   "Limp": "url_da_img3"
+  // }
+  arrayShops && imgByBrand && arrayShops.map(objetoShops => objetoShops.img = imgByBrand[`${objetoShops.name}`])
+  console.log(arrayShops)
   return (
     <div className='swiper mySwiper-destaques swiper-destaques ' id="carrosselDestaques">
       {title && (
@@ -40,13 +46,13 @@ export default function App({ appId }: { appId: string }) {
         }}
         modules={[ Navigation, Pagination ]}
         >
-        {categories && categories.map((category: any, index: number) => (
+        {arrayShops && arrayShops.map((item: Shop, index: number) => (
           <SwiperSlide key={index} className="swiper-slide">
-                <a href={category.url}>
-                  <img id={`image-destaques-${index}`} className="image-destaques" src={category.img} alt={category.title}/>
-                  <p className="swiper-item-title">{category.title}</p>
+                <a href={item.url}>
+                  <img id={`image-destaques-${index}`} className="image-destaques" src={item.img} alt={item.name}/>
+                  <p className="swiper-item-title">{item.name}</p>
                 </a>
-              </SwiperSlide>
+          </SwiperSlide>
             ))}
         </Swiper>
       )}
