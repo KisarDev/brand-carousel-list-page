@@ -15,19 +15,15 @@ export default function App({ appId }: { appId: string }) {
   const [slideConfig] = sdk.prop<any>("slideConfig");
   const initialArrayShops: Shop[] = getData({ object: window });
   const [arrayShops, setArrayShops] = useState<Shop[]>(initialArrayShops);
-  console.log("#Debug, Array inicial do shops sem as imagens", arrayShops)
-  console.log("#Debug, array e imgs", arrayShops, imgByBrand)
   useEffect(() => {
     if (imgByBrand && arrayShops) {
-      console.log("#Debug, entrei no if")
       const updatedShops: Shop[] = arrayShops.map((objetoShops) => {
-        objetoShops.img = imgByBrand[`${objetoShops.name}`];
+        objetoShops.img = imgByBrand[`${objetoShops.name}`] || "https://placehold.co/250";
         return objetoShops
       });
       setArrayShops(updatedShops);
     }
   }, [imgByBrand, arrayShops]);
-  console.log("#Debug, Array final com as imagens do json", arrayShops)
 
   return (
     <div className='swiper mySwiper-destaques swiper-destaques' id="carrosselDestaques">

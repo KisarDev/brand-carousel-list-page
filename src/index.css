@@ -83,6 +83,7 @@ img.image-destaques {
   ) !important;
   box-shadow: var(--zyph-c-brands-category-item-shadow, none) !important;
   background-color: var(--zyph-c-brands-img-bg-color, #ffffff) !important;
+  object-fit: contain !important;
 }
 
 .swiper {
@@ -296,6 +297,7 @@ img.image-destaques {
     background-repeat: no-repeat !important;
     cursor: pointer !important;
     animation: none !important;
+    object-fit: contain !important;
   }
 
   #carrosselDestaques {

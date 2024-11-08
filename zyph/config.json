@@ -23,8 +23,7 @@
     },
     "imgByBrand": {
       "type": "object",
-      "value": 
-      {
+      "value": {
         "Lavor": "https://api.zyph.io/uploads/lavor_1150_af28e70ac4.png",
         "Wap": "https://api.zyph.io/uploads/cropped_WAP_Marca_Preta_1_d00c200419.png",
         "Flash Limp": "https://api.zyph.io/uploads/images_1_e95dcb5dae.png",
