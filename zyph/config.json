@@ -21,65 +21,20 @@
       "type": "string",
       "value": "Carrossel de Marcas"
     },
-    "categories": {
-      "type": "array",
-      "value": [
-        {
-          "title": "Teste",
-          "img": "https://placehold.co/240x240",
-          "url": "https://www.globo.com"
-        },
-        {
-          "title": "Teste2",
-          "img": "https://placehold.co/240x240",
-          "url": "https://www.globo.com"
-        },
-        {
-          "title": "Teste3",
-          "img": "https://placehold.co/240x240",
-          "url": "https://www.globo.com"
-        },
-        {
-          "title": "Teste4",
-          "img": "https://placehold.co/240x240",
-          "url": "https://www.globo.com"
-        },
-        {
-          "title": "Teste5",
-          "img": "https://placehold.co/240x240",
-          "url": "https://www.globo.com"
-        },
-        {
-          "title": "Teste6",
-          "img": "https://placehold.co/240x240",
-          "url": "https://www.globo.com"
-        },
-        {
-          "title": "Teste7",
-          "img": "https://placehold.co/240x240",
-          "url": "https://www.globo.com"
-        },
-        {
-          "title": "Teste8",
-          "img": "https://placehold.co/240x240",
-          "url": "https://www.globo.com"
-        },
-        {
-          "title": "Teste9",
-          "img": "https://placehold.co/240x240",
-          "url": "https://www.globo.com"
-        },
-        {
-          "title": "Teste10",
-          "img": "https://placehold.co/240x240",
-          "url": "https://www.globo.com"
-        },
-        {
-          "title": "Teste11",
-          "img": "https://placehold.co/240x240",
-          "url": "https://www.globo.com"
-        }
-      ]
+    "imgByBrand": {
+      "type": "object",
+      "value": 
+      {
+        "Lavor": "https://api.zyph.io/uploads/lavor_1150_af28e70ac4.png",
+        "Wap": "https://api.zyph.io/uploads/cropped_WAP_Marca_Preta_1_d00c200419.png",
+        "Flash Limp": "https://api.zyph.io/uploads/images_1_e95dcb5dae.png",
+        "Solari": "https://api.zyph.io/uploads/solaris150_15483dac8b.png",
+        "Würth": "https://api.zyph.io/uploads/wurth_a39bad4446.png",
+        "IPC": "https://api.zyph.io/uploads/logo_ipc_brasil_34jnl_J_91b769db4f.png",
+        "Mor": "https://api.zyph.io/uploads/mor_dcce555d64.png",
+        "Util": "https://api.zyph.io/uploads/util_b264b90cb2.png",
+        "Utilud": "https://api.zyph.io/uploads/utilud_bd60bfade5.png"
+      }   
     }
   },
   "colors": {
